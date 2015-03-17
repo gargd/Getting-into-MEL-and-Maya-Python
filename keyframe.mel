@@ -1,0 +1,13 @@
+// Select the objects
+
+string $myObjects[]=`ls -sl`;
+
+string $myAttr[]=`channelBox -q -sma mainChannelBox`;
+
+//start the loops
+
+for($myNode in $myObjects){
+	for($myNodeAttr in $myAttr){
+		setKeyframe($myNode+"."+$myNodeAttr);
+		}
+}
